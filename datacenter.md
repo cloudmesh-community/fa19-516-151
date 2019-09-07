@@ -2,7 +2,25 @@
 
 ## E.Datacenter.2a
 
+*"1 megawatt (MW) of power consumed by a supercomputer today typically requires another 0.7 MW of cooling to offset the heat generated—and **each megawatt of electric power costs approximately US1 million per year.**The Japanese Earth Simulator, for example, ranked as the top supercomputer on the TOP500 list from 2002 to 2004, **consumed 12 MW of power, resulting in US$10 million per year** in operating costs just for powering and cooling. "  — Green Supercomputing Comes of Age*
+
+Given the information from the above source,  using the carbon footprint calculator. The results are as follow:
+
+| IT Load (kW):                | 12 MW      |
+| ---------------------------- | ---------- |
+| Yearly Cost ($):             | 10 million |
+| Yearly CO2 Footprint (tons): | 10,958,760 |
+| CO2 equivalent in cars:      | 4,226,880  |
+
+**Reference:**
+
+[Green Supercomputing Comes of Age](http://seec.cs.vt.edu/pubs/papers/feng-itpro-green.pdf)
+
+[data center carbon footprint comparison calculator](https://www.schneider-electric.com/en/work/solutions/system/s1/data-center-and-network-systems/trade-off-tools/data-center-carbon-footprint-comparison-calculator/)
+
 ## E.Datacenter.2b
+
+datacenter.md was submitted to this [link](https://github.com/cloudmesh-community/fa19-516-151)
 
 ## E.Datacenter.3
 The carbon emission for a person who lives in a  1b1b, and only travels 14 miles a week by the city bus, in the mean time has no car is about 21550 lbs. 
@@ -34,3 +52,8 @@ In conclusion, China is becoming more active on the climate or environmental iss
 
 [Dong, Wenjuan; Ye, Qi (18 May 2018). "Utility of renewable energy in China's low-carbon transition"*Brookings*. Retrieved 29 October 2018 ](https://www.brookings.edu/2018/05/18/utility-of-renewable-energy-in-chinas-low-carbon-transition)
 
+## E.Datacenter.6
+
+##E.Datacenter.7
+
+##E.Datacenter.8
