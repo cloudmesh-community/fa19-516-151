@@ -2,7 +2,7 @@
 
 ## E.Datacenter.2a
 
-*"1 megawatt (MW) of power consumed by a supercomputer today typically requires another 0.7 MW of cooling to offset the heat generated—and **each megawatt of electric power costs approximately US1 million per year.**The Japanese Earth Simulator, for example, ranked as the top supercomputer on the TOP500 list from 2002 to 2004, **consumed 12 MW of power, resulting in US$10 million per year** in operating costs just for powering and cooling. "  — Green Supercomputing Comes of Age*
+"1 megawatt (MW) of power consumed by a supercomputer today typically requires another 0.7 MW of cooling to offset the heat generated—and **each megawatt of electric power costs approximately US1 million per year.**The Japanese Earth Simulator, for example, ranked as the top supercomputer on the TOP500 list from 2002 to 2004, **consumed 12 MW of power, resulting in US$10 million per year** in operating costs just for powering and cooling. "  — Green Supercomputing Comes of Age
 
 Given the information from the above source,  using the carbon footprint calculator. The results are as follow:
 
