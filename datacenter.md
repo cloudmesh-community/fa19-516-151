@@ -6,9 +6,9 @@
 
 Given the information from the above source,  using the carbon footprint calculator. The results are as follow:
 
-| IT Load (kW):                | 12 MW      |
+| IT Load (kW):                | 12000 KW   |
 | ---------------------------- | ---------- |
-| Yearly Cost ($):             | 10 million |
+| Yearly Cost ($):             | 10 Million |
 | Yearly CO2 Footprint (tons): | 10,958,760 |
 | CO2 equivalent in cars:      | 4,226,880  |
 
@@ -77,3 +77,13 @@ To recap, to preventing the power consumption of data centers grow too fast than
 [How to stop data centres from gobbling up the world’s electricity](https://www.nature.com/articles/d41586-018-06610-y)
 
 ## E.Datacenter.8
+
+Last week an outage occurred at Amazon AWS located in North Virginia. Even though the backup generator came to work, they failed  after about two hours. 
+
+The outage "impacted 7.5% of EC2 instances and EBS volumes in the Availability Zone." The outage ended up with the data stored  in the instances remained unrecoverable. A company of BleepingComputer whose services relies on the Amazon AWS was heavily affected so that their data became unrecoverable. 
+
+This outage reminds all of the users  to invest in a secondary backup provider regardless of where data is stored.
+
+**References:**
+
+[Amazon AWS Outage Shows Data in the Cloud is Not Always Safe]()
