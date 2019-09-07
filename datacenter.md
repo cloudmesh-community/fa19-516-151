@@ -5,19 +5,20 @@
 ## E.Datacenter.2b
 
 ## E.Datacenter.3
-The foot print for a people who live in a one bed and one bath room, only take 14 miles a week by the city bus, has no car is about 21550 lbs. 
+The carbon emission for a person who lives in a  1b1b, and only travels 14 miles a week by the city bus, in the mean time has no car is about 21550 lbs. 
 
-Submitted to this link` <http://www.google.com>`
+The data was submitted to this [link](http://www.google.com)
 
 ## E.Datacenter.4
-One of the Renewable energy used by data centers is the wind energy. As the definition on wiki says, "Wind power or wind energy is the use of air flow through wind turbines to provide the mechanical power to turn electric generators and traditionally to do other work, like milling or pumping."  
+One of the renewable energy used by data centers is the wind energy. As the definition on wiki says, "Wind power or wind energy is the use of air flow through wind turbines to provide the mechanical power to turn electric generators and traditionally to do other work, like milling or pumping."  
 
 Now the containers of Microsoft located at Colorado, Microsoft Virtual Earth, are wind-powered.  
 
 **Reference:**
 
-1. https://www.datacenterknowledge.com/archives/2008/04/18/microsoft-unveils-wind-powered-containers
-2. https://en.wikipedia.org/wiki/Wind_power
+[Microsoft Unveils Wind-Powered Containers](https://www.datacenterknowledge.com/archives/2008/04/18/microsoft-unveils-wind-powered-containers)
+
+[Wind power](https://en.wikipedia.org/wiki/Wind_power)
 
 ## E.Datacenter.5
 
@@ -29,7 +30,7 @@ In conclusion, China is becoming more active on the climate or environmental iss
 
 **Reference:**
 
-[China's Role and Contribution in the Global Governance of Climate Change: Institutional Adjustments for Carbon Tax Introduction, Collection and Management in China](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2695612)
+[China's Role and Contribution in the Global Governance of Climate Change: Institutional Adjustments for Carbon Tax Introduction, Collection and Management in China](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2695612) 
 
-[Dong, Wenjuan; Ye, Qi (18 May 2018). ["Utility of renewable energy in China's low-carbon transition"] *Brookings*. Retrieved 29 October 2018.](https://www.brookings.edu/2018/05/18/utility-of-renewable-energy-in-chinas-low-carbon-transition/))
+[Dong, Wenjuan; Ye, Qi (18 May 2018). "Utility of renewable energy in China's low-carbon transition"*Brookings*. Retrieved 29 October 2018 ](https://www.brookings.edu/2018/05/18/utility-of-renewable-energy-in-chinas-low-carbon-transition)
 
