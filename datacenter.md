@@ -14,29 +14,29 @@ Given the information from the above source,  using the carbon footprint calcula
 
 **Reference:**
 
-[Green Supercomputing Comes of Age](http://seec.cs.vt.edu/pubs/papers/feng-itpro-green.pdf)
+<http://seec.cs.vt.edu/pubs/papers/feng-itpro-green.pdf>
 
-[data center carbon footprint comparison calculator](https://www.schneider-electric.com/en/work/solutions/system/s1/data-center-and-network-systems/trade-off-tools/data-center-carbon-footprint-comparison-calculator/)
+<https://www.schneider-electric.com/en/work/solutions/system/s1/data-center-and-network-systems/trade-off-tools/data-center-carbon-footprint-comparison-calculator/>
 
 ## E.Datacenter.2b
 
-datacenter.md was submitted to this [link](https://github.com/cloudmesh-community/fa19-516-151)
+datacenter.md was submitted to <https://github.com/cloudmesh-community/fa19-516-151>
 
 ## E.Datacenter.3
+
 The carbon emission for a person who lives in a  1b1b, and only travels 14 miles a week by the city bus, in the mean time has no car is about 21550 lbs. 
 
-The data was submitted to this [link](http://www.google.com)
-
 ## E.Datacenter.4
+
 One of the renewable energy used by data centers is the wind energy. As the definition on wiki says, "Wind power or wind energy is the use of air flow through wind turbines to provide the mechanical power to turn electric generators and traditionally to do other work, like milling or pumping."  
 
 Now the containers of Microsoft located at Colorado, Microsoft Virtual Earth, are wind-powered.  
 
 **Reference:**
 
-[Microsoft Unveils Wind-Powered Containers](https://www.datacenterknowledge.com/archives/2008/04/18/microsoft-unveils-wind-powered-containers)
+<https://www.datacenterknowledge.com/archives/2008/04/18/microsoft-unveils-wind-powered-containers>
 
-[Wind power](https://en.wikipedia.org/wiki/Wind_power)
+<https://en.wikipedia.org/wiki/Wind_power>
 
 ## E.Datacenter.5
 
@@ -48,9 +48,9 @@ In conclusion, China is becoming more active on the climate or environmental iss
 
 **Reference:**
 
-[China's Role and Contribution in the Global Governance of Climate Change: Institutional Adjustments for Carbon Tax Introduction, Collection and Management in China](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2695612) 
+<https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2695612>
 
-[Dong, Wenjuan; Ye, Qi (18 May 2018). "Utility of renewable energy in China's low-carbon transition"*Brookings*. Retrieved 29 October 2018 ](https://www.brookings.edu/2018/05/18/utility-of-renewable-energy-in-chinas-low-carbon-transition)
+<https://www.brookings.edu/2018/05/18/utility-of-renewable-energy-in-chinas-low-carbon-transition>
 
 ## E.Datacenter.6
 
@@ -60,7 +60,7 @@ The rear door heat exchanger, which using the technology, has an obvious advanta
 
 **References:**
 
-[Data Center Rack Cooling with Rear-door Heat Exchanger ](https://datacenters.lbl.gov/sites/all/files/rdhx-doe-femp.pdf)
+<https://datacenters.lbl.gov/sites/all/files/rdhx-doe-femp.pdf>
 
 ## E.Datacenter.7
 
@@ -72,9 +72,9 @@ To recap, to preventing the power consumption of data centers grow too fast than
 
 **Reference:**
 
-[Machine Learning to Help Optimize Traffic and Reduce Pollution](https://newscenter.lbl.gov/2018/10/28/machine-learning-to-help-optimize-traffic-and-reduce-pollution/)
+<https://newscenter.lbl.gov/2018/10/28/machine-learning-to-help-optimize-traffic-and-reduce-pollution/>
 
-[How to stop data centres from gobbling up the world’s electricity](https://www.nature.com/articles/d41586-018-06610-y)
+<https://www.nature.com/articles/d41586-018-06610-y>
 
 ## E.Datacenter.8
 
@@ -85,5 +85,4 @@ The outage "impacted 7.5% of EC2 instances and EBS volumes in the Availability Z
 This outage reminds all of the users  to invest in a secondary backup provider regardless of where data is stored.
 
 **References:**
-
-[Amazon AWS Outage Shows Data in the Cloud is Not Always Safe]()
+<https://www.bleepingcomputer.com/news/technology/amazon-aws-outage-shows-data-in-the-cloud-is-not-always-safe/>
