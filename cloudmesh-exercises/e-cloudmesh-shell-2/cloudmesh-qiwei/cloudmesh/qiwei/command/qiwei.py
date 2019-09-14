@@ -29,6 +29,7 @@ class QiweiCommand(PluginCommand):
 
         """
         arguments.FILE = arguments['--file'] or None
+        print(arguments.FILE)
 
         VERBOSE(arguments)
 
