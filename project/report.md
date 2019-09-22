@@ -6,7 +6,7 @@ The project you will be developing a number of services exposing AI capabilities
 
 Your service must be demonstrated on kubernetes and OpenStack showcasing applicability in container and virtual machines. A deployment, testing, and benchmark activity need t be demonstrated.
 
-##Objective
+## Objective
 
 This project will provide AI capabilities  on the cloud. The functionalities will be deployed at two different cloud platform in order to compare their performance. The cloud will expose REST API for users. Users are able to upload data to the cloud, calling functions and receive response messages. Now the cloud only provides a number of services, and the project will evolve at the later development. The scenario where user use AI service offered by the cloud should be defined in diverse situations.
 
@@ -27,7 +27,7 @@ This project will provide AI capabilities  on the cloud. The functionalities wil
 
 * Pytest will be the testing framework of this project 
 
-##Benchmark
+## Benchmark
 
 ## Team Member 
 
