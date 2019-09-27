@@ -1,0 +1,19 @@
+openapi: 3.0.0
+info:
+  title: ai services
+  description: ai services included in scikit-learn
+  license:
+    name: Apache 2.0
+  version: 0.0.1
+
+servers:
+  - url: http://localhost:8080/cloudmesh-ai-services
+
+paths:
+  /linear-regression:
+    get:
+      summary: doing linear regression
+      operationId: ai_services.run_linear_regression
+      responses:
+        '200':
+          description: cpu info
