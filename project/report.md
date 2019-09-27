@@ -1,6 +1,6 @@
 # Cloudmesh Cloud AI Service
 
-> *The project you will be developing a number of services exposing AI capabilities on the cloud. You will be developig a REST service that invokes an AI functionality in a general term. It is not sufficient to just port an application, but you must decide which functions are part of the application and port these as collaborating REST services.* *Your service must be demonstrated on kubernetes and OpenStack showcasing applicability in container and virtual machines. A deployment, testing, and benchmark activity need t be demonstrated.*
+The project you will be developing a number of services exposing AI capabilities on the cloud. You will be developig a REST service that invokes an AI functionality in a general term. It is not sufficient to just port an application, but you must decide which functions are part of the application and port these as collaborating REST services.* *Your service must be demonstrated on kubernetes and OpenStack showcasing applicability in container and virtual machines. A deployment, testing, and benchmark activity need t be demonstrated.
 
 ## Technical Feasibility
 
