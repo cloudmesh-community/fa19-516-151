@@ -7,13 +7,13 @@ info:
   version: 0.0.1
 
 servers:
-  - url: http://localhost:8080/cloudmesh-ai-services
+  - url: http://localhost:5000/cloudmesh-ai-services
 
 paths:
   /linear-regression:
     get:
       summary: doing linear regression
-      operationId: ai_services.run_linear_regression
+      operationId: ai_service.ai_services.run_linear_regression
       responses:
         '200':
           description: cpu info
