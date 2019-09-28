@@ -16,7 +16,7 @@ def create_app(test_config=None):
         c_app.app.config.from_pyfile('config.py', silent=True)
     else:
         # load the test config if passed in
-        c_app.config.from_mapping(test_config)
+        c_app.app.config.from_mapping(test_config)
 
     # ensure the instance folder exists
     try:
