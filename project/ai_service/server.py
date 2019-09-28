@@ -1,6 +1,5 @@
 import os
 import connexion
-from flask import Flask
 
 def create_app(test_config=None):
     # create and configure the app
@@ -29,11 +28,13 @@ def create_app(test_config=None):
     def hello():
         return 'Hello, World!'
 
-    # Initialize the app
+    # Register init-db an so on.
+    # This cannot be from . import db which will cause error
+    # The dot will be converted to __main__
     from ai_service import db
     db.init_app(c_app.app)
 
     return c_app.app
 
 if __name__ == '__main__':
-    create_app().run(port=5000, debug=True)
+    create_app().run(port=8000, debug=True)
