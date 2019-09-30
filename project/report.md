@@ -30,9 +30,9 @@ on Flask
 
 ## Team Members 
 
-Qiwei Liu <https://github.com/cloudmesh-community/fa19-516-151>
+[Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 
-Yanting Wan <https://github.com/cloudmesh-community/fa19-516-170> 
+[Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 
 ## Progress 
 
