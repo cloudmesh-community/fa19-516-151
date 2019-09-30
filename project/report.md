@@ -14,10 +14,11 @@ deployment, testing, and benchmark activity need t be demonstrated.
 
 ### REST
 
-* OpenAPI The REST API will be defined by using OpenAPI specification Swagger editor The swagger editor is used to write
-* API documentation based on the OpenAPI standard Flask The web application framework that handles incoming requests
-* Connexion Connexion is an application on the top of Flask that will map the REST API documentation to python functions
-* on Flask
+* OpenAPI: The REST API will be defined by using OpenAPI specification 
+* Swagger editor: The swagger editor is used to write API documentation based on the OpenAPI standard 
+* Flask: The web application framework that handles incoming requests
+* Connexion: Connexion is an application on the top of Flask that will map the REST API documentation to python functions
+on Flask
 
 ### Testing
 
@@ -31,9 +32,18 @@ deployment, testing, and benchmark activity need t be demonstrated.
 
 Qiwei Liu <https://github.com/cloudmesh-community/fa19-516-151>
 
-Yanting Wan <https://github.com/cloudmesh-community/fa19-516-170> Progress
+Yanting Wan <https://github.com/cloudmesh-community/fa19-516-170> 
 
 ## Progress 
+
+### Week 6
+
+[Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+
+[Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+
+
+
 
 ## Work Breakdown
 
