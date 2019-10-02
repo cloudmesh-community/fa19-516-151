@@ -8,6 +8,7 @@ def create_app(test_config=None):
     c_app.app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(c_app.app.instance_path, 'ai_service.sqlite'),
+        UPLOAD_FOLDER='../files'
     )
 
     if test_config is None:
@@ -20,6 +21,12 @@ def create_app(test_config=None):
     # ensure the instance folder exists
     try:
         os.makedirs(c_app.app.instance_path)
+    except OSError:
+        pass
+
+    # ensure the file folder exists
+    try:
+        os.makedirs(c_app.app.config['UPLOAD_FOLDER'])
     except OSError:
         pass
 
