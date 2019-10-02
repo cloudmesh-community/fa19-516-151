@@ -7,7 +7,8 @@ import pandas as pd
 
 def read_file(file_name):
     data = pd.read_csv(os.path.join(current_app.config['UPLOAD_FOLDER'], file_name + '.csv', ), header=None)
-    return data.values
+
+    return jsonify({file_name: data.values.tolist()})
 
 def allowed_file(file_name, allowed_extentions):
     return '.' in file_name and \

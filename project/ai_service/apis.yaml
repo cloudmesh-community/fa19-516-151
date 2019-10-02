@@ -51,13 +51,30 @@ paths:
       responses:
         '200':
           description: upload succeed
+        default:
+          description: incompatible file format
           content:
-              application/json:
-                schema:
+            application/json:
+              schema:
                   type: object
                   properties:
-                    files:
+                    error_message:
                       type: string
+
+  /read-file/{file_name}:
+    get:
+      summary: read file content
+      operationId: ai_service.ai_services.read_file
+      parameters:
+        - in: path
+          name: file_name   # Note the name is the same as in the path
+          required: true
+          schema:
+            type: string
+          description: The file name to be read
+      responses:
+        '200':
+          description: succeed
         default:
           description: incompatible file format
           content:
