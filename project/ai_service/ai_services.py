@@ -3,14 +3,18 @@ from flask import jsonify, current_app
 import numpy as np
 from sklearn.linear_model import LinearRegression
 from werkzeug.utils import secure_filename
+import pandas as pd
 
-def allowed_file(filename, allowed_extentions):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in allowed_extentions
+def read_file(file_name):
+    data = pd.read_csv(os.path.join(current_app.config['UPLOAD_FOLDER'], file_name + '.csv', ), header=None)
+    return data.values
+
+def allowed_file(file_name, allowed_extentions):
+    return '.' in file_name and \
+           file_name.rsplit('.', 1)[1].lower() in allowed_extentions
 
 def save_file(file):
     filename = secure_filename(file.filename)
-
     file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
     # TODO: if save failed?
 
@@ -23,7 +27,7 @@ def upload(file=None):
         return jsonify({'error_message': 'Wrong file format'}), 400
 
 def list_files():
-    files = os.listdir('../files')
+    files = os.listdir(current_app.config['UPLOAD_FOLDER'])
     return jsonify({'files': files})
 
 def run_linear_regression(X):
