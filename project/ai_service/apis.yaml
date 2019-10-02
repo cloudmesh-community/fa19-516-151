@@ -44,7 +44,29 @@ paths:
                   properties:
                     error_message:
                       type: string
-
+  /list-files:
+    get:
+      summary: list all uploaded files
+      operationId: ai_service.ai_services.list_files
+      responses:
+        '200':
+          description: upload succeed
+          content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    files:
+                      type: string
+        default:
+          description: incompatible file format
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    error_message:
+                      type: string
 
   /linear-regression:
     get:

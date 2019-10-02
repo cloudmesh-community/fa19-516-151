@@ -8,7 +8,6 @@ def create_app(test_config=None):
     c_app.app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(c_app.app.instance_path, 'ai_service.sqlite'),
-
     )
 
     if test_config is None:
