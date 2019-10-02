@@ -10,6 +10,42 @@ servers:
   - url: http://localhost:8000/cloudmesh-ai-services
 
 paths:
+  /upload:
+    post:
+      summary: uploading file to the server
+      operationId: ai_service.ai_services.upload
+      requestBody:
+        description: the file uploaded by the user
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: upload succeed
+          content:
+              application/json:
+                schema:
+                  type: object
+                  properties:
+                    file_name:
+                      type: string
+        default:
+          description: incompatible file format
+          content:
+            application/json:
+              schema:
+                  type: object
+                  properties:
+                    error_message:
+                      type: string
+
+
   /linear-regression:
     get:
       summary: doing linear regression
@@ -18,3 +54,11 @@ paths:
         '200':
           description: cpu info
 
+
+  /pca:
+    get:
+      summary: principle components analysis
+      operationId: ai_service.ai_services.run_pca # working directory
+      responses:
+        '200':
+          description: cpu info
