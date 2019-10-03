@@ -13,7 +13,7 @@ paths:
   /upload:
     post:
       summary: uploading file to the server
-      operationId: ai_service.ai_services.upload
+      operationId: ai_services.upload
       requestBody:
         description: the file uploaded by the user
         required: true
@@ -47,7 +47,7 @@ paths:
   /list-files:
     get:
       summary: list all uploaded files
-      operationId: ai_service.ai_services.list_files
+      operationId: ai_services.list_files
       responses:
         '200':
           description: upload succeed
@@ -64,7 +64,7 @@ paths:
   /read-file/{file_name}:
     get:
       summary: read file content
-      operationId: ai_service.ai_services.read_file
+      operationId: ai_services.read_file
       parameters:
         - in: path
           name: file_name   # Note the name is the same as in the path
@@ -88,7 +88,7 @@ paths:
   /linear-regression:
     get:
       summary: doing linear regression
-      operationId: ai_service.ai_services.run_linear_regression
+      operationId: ai_services.run_linear_regression
       responses:
         '200':
           description: cpu info
@@ -97,7 +97,7 @@ paths:
   /pca:
     get:
       summary: principle components analysis
-      operationId: ai_service.ai_services.run_pca # working directory
+      operationId: ai_services.run_pca # working directory
       responses:
         '200':
           description: cpu info

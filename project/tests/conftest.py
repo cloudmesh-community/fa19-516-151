@@ -3,11 +3,8 @@ import tempfile
 
 import pytest
 
-import sys
-print(sys.path)
-
-from ..ai_service.server import create_app
-from ..ai_service.db import get_db, init_db
+from ai_service.server import create_app
+from ai_service.db import get_db, init_db
 
 with open(os.path.join(os.path.dirname(__file__), 'data.sql'), 'rb') as f:
     _data_sql = f.read().decode('utf8')
