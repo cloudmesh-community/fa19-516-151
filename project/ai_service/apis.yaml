@@ -85,10 +85,21 @@ paths:
                     error_message:
                       type: string
 
-  /linear-regression:
-    get:
+  /linear-regression/{file_name}:
+    post:
       summary: doing linear regression
       operationId: ai_service.ai_services.run_linear_regression
+      parameters:
+        - in: path
+          name: file_name   # Note the name is the same as in the path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
       responses:
         '200':
           description: cpu info

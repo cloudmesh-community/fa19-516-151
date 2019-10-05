@@ -6,9 +6,15 @@ from werkzeug.utils import secure_filename
 import pandas as pd
 
 def read_file(file_name):
-    data = pd.read_csv(os.path.join(current_app.config['UPLOAD_FOLDER'], file_name + '.csv', ), header=None)
+    try:
+        data = private_read_file(file_name)
+    except:
+        return jsonify({'error_message': 'failed to read'})
+    return jsonify({file_name: data.tolist()})
 
-    return jsonify({file_name: data.values.tolist()})
+def private_read_file(file_name):
+    data = pd.read_csv(os.path.join(current_app.config['UPLOAD_FOLDER'], file_name + '.csv', ), header=None)
+    return data.values
 
 def allowed_file(file_name, allowed_extentions):
     return '.' in file_name and \
@@ -31,15 +37,10 @@ def list_files():
     files = os.listdir(current_app.config['UPLOAD_FOLDER'])
     return jsonify({'files': files})
 
-def run_linear_regression(X):
-    """
-    :param:
-    :return:
-    """
-    # y = 1 * x_0 + 2 * x_1 + 3
-    y = np.dot(X, np.array([1, 2])) + 3
-    reg = LinearRegression().fit(X, y)
-    return jsonify({"output": 'success'})
+def run_linear_regression(file_name, body):
+    print(file_name)
+    print(body)
+    return jsonify({"output": body})
 
 def run_pca():
     return jsonify({"output": 'run_pca_success'})
