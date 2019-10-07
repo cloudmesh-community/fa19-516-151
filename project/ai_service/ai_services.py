@@ -4,6 +4,7 @@ import numpy as np
 from sklearn.linear_model import LinearRegression
 from werkzeug.utils import secure_filename
 import pandas as pd
+import pickle
 
 def read_file(file_name):
     try:
@@ -38,8 +39,7 @@ def list_files():
     return jsonify({'files': files})
 
 def run_linear_regression(file_name, body):
-    print(file_name)
-    print(body)
+
     return jsonify({"output": body})
 
 def run_pca():

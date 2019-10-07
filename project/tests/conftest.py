@@ -7,9 +7,6 @@ sys.path.append(os.path.dirname(os.getcwd()))
 from ai_service.server import create_app
 from ai_service.db import get_db, init_db
 
-with open(os.path.join(os.path.dirname(__file__), 'data.sql'), 'rb') as f:
-    _data_sql = f.read().decode('utf8')
-
 
 @pytest.fixture
 def app():
@@ -18,11 +15,11 @@ def app():
     app = create_app({
         'TESTING': True,
         'DATABASE': db_path,
+        'UPLOAD_FOLDER': './testing_files' # Set the folder path for testing
     })
 
     with app.app_context():
         init_db()
-        get_db().executescript(_data_sql)
 
     yield app
 
