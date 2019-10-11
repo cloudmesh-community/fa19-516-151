@@ -8,6 +8,9 @@ deployment, testing, and benchmark activity need t be demonstrated.
 
 ## Technical Feasibility
 
+### Operating System
+* Mac OS
+
 ### Databae
 
 * Mongodb
