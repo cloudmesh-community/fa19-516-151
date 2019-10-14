@@ -49,7 +49,9 @@ on Flask
 
 [Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 
-
+1. Set up connexion, and uses it to map Opean API(yaml) file.
+2. Done uploading file locally, testing it on Swagger-ui
+3. Done testing a ai function with locally stored dictionary as parameter, testing it on Swagger-ui
 
 
 ## Work Breakdown
