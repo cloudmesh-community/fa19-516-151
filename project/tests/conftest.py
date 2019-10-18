@@ -2,10 +2,9 @@ import os
 import tempfile
 import pytest
 import sys
-sys.path.append(os.path.dirname(os.getcwd()))
 
-from ai_service.server import create_app
-from ai_service.db import get_db, init_db
+from server import create_app
+from db import get_db, init_db
 
 
 @pytest.fixture

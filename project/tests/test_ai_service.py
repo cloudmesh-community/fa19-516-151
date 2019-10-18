@@ -1,9 +1,8 @@
-from ai_service.server import create_app
+from server import create_app
 from flask import jsonify
 import sys
 import os
 import json
-sys.path.append(os.path.dirname(os.getcwd()))
 from inspect import signature
 from sklearn.linear_model import LinearRegression
 from werkzeug.test import EnvironBuilder

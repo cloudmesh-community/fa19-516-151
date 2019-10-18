@@ -41,9 +41,7 @@ def create_app(test_config=None):
         return 'Hello, World!'
 
     # Register init-db an so on.
-    # This cannot be from . import db which will cause error
-    # The dot will be converted to __main__
-    from ai_service import db
+    import db
     db.init_app(c_app.app)
 
     return c_app.app
