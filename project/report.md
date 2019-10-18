@@ -1,5 +1,9 @@
 # Cloudmesh Cloud AI Service
 
+
+* [Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+* [Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+
 The project you will be developing a number of services exposing AI capabilities on the cloud. You will be developig a
 REST service that invokes an AI functionality in a general term. It is not sufficient to just port an application, but
 you must decide which functions are part of the application and port these as collaborating REST services.our
@@ -30,12 +34,6 @@ on Flask
 ## Benchmark 
 
 ## Reference 
-
-## Team Members 
-
-[Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
-
-[Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 
 ## Progress 
 
