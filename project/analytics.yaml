@@ -1,10 +1,10 @@
 openapi: 3.0.0
 info:
-  title: ai services
-  description: ai services included in scikit-learn
+  title: Cloudmesh AI Analytics  Services
+  description: CLoudmesh Scikit-Learn AI Analytics Services
   license:
     name: Apache 2.0
-  version: 0.0.1
+  version: 0.0.2
 
 servers:
   - url: http://localhost:8000/cloudmesh-ai-services
