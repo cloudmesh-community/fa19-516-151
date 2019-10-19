@@ -1,15 +1,22 @@
 # Cloudmesh Cloud AI Service
 
-The project you will be developing a number of services exposing AI capabilities on the cloud. You will be developig a
-REST service that invokes an AI functionality in a general term. It is not sufficient to just port an application, but
-you must decide which functions are part of the application and port these as collaborating REST services.our
-service must be demonstrated on kubernetes and OpenStack showcasing applicability in container and virtual machines. A
-deployment, testing, and benchmark activity need t be demonstrated.
+The cloudmesh Cloud Ai service will provide AI capabilities that are running on the different cloud, e.g. chamelon, asure. For the example functions, linear regression, principle components analysis and so on will be provided so that users can utilize the computing power of the clouds to train their models. The cloudmesh cloud AI service will administrate  multiple clouds and determine which cloud to use for scheduled tasks. 
 
-Link to the project:
+Link:
 <https://github.com/cloudmesh-community/fa19-516-151>
 
-## Technical Feasibility
+## Architecture Design
+
+![architecture](./report-firgures/architecture.svg)
+
+The architecture primarily contains four objects:
+
+* User which is the actor
+* The application running on local host using cloudmesh  will manipulate multiple cloud instance, decides delegate computational tasks to which cloud
+* The AI services will be running on the Asure, Chameleon, and Chameleon cloud, exposing APIs to incoming requests, and return the return the result to the local host
+
+
+## Technical Analysis
 
 ### Operating System
 * Mac OS
@@ -25,13 +32,15 @@ Link to the project:
 * Flask: The web application framework that handles incoming requests
 * Connexion: Connexion is an application on the top of Flask that will map the REST API documentation to python functions
 on Flask
-* Pytest will be the testing framework of this project
+* Pytest will be the testing framework
 
 ## Benchmark 
 
 ## Reference 
 
-## Team Member
+# Development 
+
+## Team Members
 
 * [Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 * [Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
@@ -41,6 +50,7 @@ on Flask
 ### Week 6
 
 [Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+
 1. Set up flask web application framework
 2. Set up the test framework and testing data based using sqlite3
 3. Done file upload, list file
@@ -55,10 +65,43 @@ on Flask
 ### Week 7
 
 [Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+
 1. Update folder structure
+
+### Code Explanation
+
+
 
 ## Work Breakdown
 
+## Example Usages
+
+Upload a file to the server that will be further processed
+
+```sh
+curl -X POST "http://localhost:8000/cloudmesh-ai-services/upload" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@learn.rkt"
+```
 
 
 
+Checking the uploaded files
+
+```sh
+curl -X GET "http://localhost:8000/cloudmesh-ai-services/list-files" -H "accept: application/json"
+```
+
+
+
+Contracting a json file which contains the file name, and the parameters for the linear regression to the REST API. The output will be save on the server that could be downloaded.
+
+```sh
+curl -X POST "http://localhost:8000/cloudmesh-ai-services/linear-regression/linear" -H "accept: */*" -H "Content-Type: application/json" -d "{\"file_name\":\"string\",\"fit_intercept\":true,\"n_jobs\":0,\"normalize\":true}"
+```
+
+
+
+The next version will encapsulate the server request command and user can only provide the content body, for example
+
+```sh
+cloudmesh ai upload "linear_regression.csv"
+```
