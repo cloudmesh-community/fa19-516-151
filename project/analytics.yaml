@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: Cloudmesh AI Analytics  Services
-  description: CLoudmesh Scikit-Learn AI Analytics Services
+  description: Cloudmesh Scikit-Learn AI Analytics Services
   license:
     name: Apache 2.0
   version: 0.0.2
