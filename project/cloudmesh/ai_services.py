@@ -1,3 +1,4 @@
+import sys
 import os
 from flask import jsonify, current_app
 import numpy as np
@@ -39,6 +40,12 @@ def list_files():
     return jsonify({'files': files})
 
 def run_linear_regression(file_name, body):
+    paras = body['paras']
+
+    try:
+        LinearRegression(**paras)
+    except Exception as e:
+        return jsonify({'error_message': str(e)})
 
     return jsonify({"output": body})
 
