@@ -10,7 +10,7 @@ servers:
   - url: http://localhost:8000/cloudmesh-ai-services
 
 paths:
-  /upload:
+  /file/upload:
     post:
       summary: uploading file to the server
       operationId: cloudmesh.file.upload
@@ -44,7 +44,7 @@ paths:
                   properties:
                     error_message:
                       type: string
-  /list-files:
+  /file/list:
     get:
       summary: list all uploaded files
       operationId: cloudmesh.file.list
@@ -61,7 +61,7 @@ paths:
                     error_message:
                       type: string
 
-  /read-file/{file_name}:
+  /file/read/{file_name}:
     get:
       summary: read file content
       operationId: cloudmesh.file.read
@@ -85,7 +85,7 @@ paths:
                     error_message:
                       type: string
 
-  /linear-regression/{file_name}:
+  /analytics/linear-regression/{file_name}:
     post:
       summary: doing linear regression
       operationId: cloudmesh.analytics.linear_regression
@@ -114,7 +114,7 @@ paths:
           description: cpu info
 
 
-  /pca:
+  /analytics/pca:
     get:
       summary: principle components analysis
       operationId: cloudmesh.analytics.pca # working directory
