@@ -76,7 +76,7 @@ on Flask
 
 ## Example Usages
 
-Upload a file to the server that will be further processed
+1. Upload a file to the server that will be further processed
 
 ```sh
 curl -X POST "http://localhost:8000/cloudmesh-ai-services/upload" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@learn.rkt"
@@ -84,7 +84,7 @@ curl -X POST "http://localhost:8000/cloudmesh-ai-services/upload" -H "accept: ap
 
 
 
-Checking the uploaded files
+2. Checking the uploaded files
 
 ```sh
 curl -X GET "http://localhost:8000/cloudmesh-ai-services/list-files" -H "accept: application/json"
@@ -92,7 +92,7 @@ curl -X GET "http://localhost:8000/cloudmesh-ai-services/list-files" -H "accept:
 
 
 
-Contracting a json file which contains the file name, and the parameters for the linear regression to the REST API. The output will be save on the server that could be downloaded.
+3. Contracting a json file which contains the file name, and the parameters for the linear regression to the REST API. The output will be save on the server that could be downloaded.
 
 ```sh
 curl -X POST "http://localhost:8000/cloudmesh-ai-services/linear-regression/linear" -H "accept: */*" -H "Content-Type: application/json" -d "{\"file_name\":\"string\",\"fit_intercept\":true,\"n_jobs\":0,\"normalize\":true}"
@@ -100,7 +100,7 @@ curl -X POST "http://localhost:8000/cloudmesh-ai-services/linear-regression/line
 
 
 
-The next version will encapsulate the server request command and user can only provide the content body, for example
+The next version will encapsulate the server request command and user can only provide the content body, For example，
 
 ```sh
 cloudmesh ai upload "linear_regression.csv"
