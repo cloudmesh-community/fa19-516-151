@@ -9,7 +9,7 @@ import sys
 def create_app(test_config=None):
     # create and configure the app
     c_app = connexion.App(__name__, specification_dir="./")
-    c_app.add_api('apis.yaml')
+    c_app.add_api('analytics.yaml')
     c_app.app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(c_app.app.instance_path, 'ai_service.sqlite'),
