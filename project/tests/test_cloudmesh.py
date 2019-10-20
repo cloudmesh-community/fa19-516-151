@@ -9,7 +9,7 @@ from werkzeug.test import EnvironBuilder
 from io import StringIO, BytesIO
 import numpy as np
 import pytest
-import cloudmesh.ai_services as ai
+import cloudmesh.analytics as ai
 
 def test_config():
     """
@@ -24,7 +24,7 @@ class TestUpload:
     def post_file(self,client, path, name):
         f = open(path, 'rb')
         # Simulate post request to upload the file
-        response = client.post(path='/cloudmesh-ai-services/upload',
+        response = client.post(path='/cloudmesh-ai-services/file/upload',
                                data={'file': (f, name)})
         f.close()
         return response.data
@@ -60,23 +60,23 @@ class TestLinearRegression:
         """
         return np.load('../tests/test_assets/test_paras.npy', allow_pickle=True).item()
 
-    def test_generate_sample_parameters(self, client):
-        """
-        This is for generating the sample parameters
-        :param client:
-        :return:
-        """
-        response = client.post(path='/cloudmesh-ai-services/linear-regression/test_upload',
-                               data=json.dumps({
-                                   'file_name': 'test_upload',
-                                   'paras':
-                                       {
-                                           'fit_intercept': True,
-                                           'normalize': False,
-                                           'n_jobs': 1
-                                       }
-                               }),
-                               content_type='application/json')
+    # def test_generate_sample_parameters(self, client):
+    #     """
+    #     This is for generating the sample parameters
+    #     :param client:
+    #     :return:
+    #     """
+    #     response = client.post(path='/cloudmesh-ai-services/analytics/linear-regression/test_upload',
+    #                            data=json.dumps({
+    #                                'file_name': 'test_upload',
+    #                                'paras':
+    #                                    {
+    #                                        'fit_intercept': True,
+    #                                        'normalize': False,
+    #                                        'n_jobs': 1
+    #                                    }
+    #                            }),
+    #                            content_type='application/json')
 
 
     def test_parameters_type(self, sample_paras):
@@ -98,7 +98,7 @@ class TestLinearRegression:
         :param client:
         :return:
         """
-        response = client.post(path='/cloudmesh-ai-services/linear-regression/test_upload',
+        response = client.post(path='/cloudmesh-ai-services/analytics/linear-regression/test_upload',
                                data=json.dumps({
                                    'file_name': 'test_upload',
                                    'paras':
@@ -122,7 +122,7 @@ class TestLinearRegression:
     #     print(f(**d))
 
 def test_run_pca(client):
-    response = client.get('/cloudmesh-ai-services/pca')
+    response = client.get('/cloudmesh-ai-services/analytics/pca')
 
     assert response.data == ''
 
