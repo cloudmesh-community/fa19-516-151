@@ -67,6 +67,7 @@ on Flask
 [Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 
 1. Update folder structure
+2. Gregor update folder structure, refactor file routes, refacter to analytics route
 
 ### Code Explanation
 
