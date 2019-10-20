@@ -69,6 +69,16 @@ on Flask
 
 1. Update folder structure
 2. Gregor update folder structure, refactor file routes, refacter to analytics route
+3. Change folder structure
+3. Change folder structure by putting functions under cloudmesh directory
+4. update project report
+5. Update report.md
+7. Update linear regression tests and the exception handling
+8. Change cloudmesh package structure
+9. Merge remote-tracking branch 'refs/remotes/origin/master'
+10. Add more tests to file operations
+11. Done prototyping linear regression
+12. Merge remote-tracking branch 'refs/remotes/origin/master'
 
 ### Week 8 
 
