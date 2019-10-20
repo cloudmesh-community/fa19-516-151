@@ -72,7 +72,7 @@ on Flask
 
 ### Week 8 
 
-1. Migration to cloudmesh-analytics
+1. Migration to cloudmesh-analytics <https://github.com/cloudmesh/cloudmesh-analytics>
 
 ### Code Explanation
 
