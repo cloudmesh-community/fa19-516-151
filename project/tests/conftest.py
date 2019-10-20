@@ -14,7 +14,8 @@ def app():
     app = create_app({
         'TESTING': True,
         'DATABASE': db_path,
-        'UPLOAD_FOLDER': './testing_files' # Set the folder path for testing
+        # Set the folder path for testing. All uploaded files will be saved here
+        'UPLOAD_FOLDER': './testing_files'
     })
 
     with app.app_context():

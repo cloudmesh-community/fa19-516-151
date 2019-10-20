@@ -19,8 +19,10 @@ def test_config():
     assert not create_app().testing
     assert create_app({'TESTING': True}).testing
 
-class TestUpload:
-
+class TestFileOperations:
+    """
+    Test file operations. The uploaded file is insulated and saved in the test_files directory
+    """
     def post_file(self,client, path, name):
         f = open(path, 'rb')
         # Simulate post request to upload the file
@@ -40,6 +42,17 @@ class TestUpload:
                == \
                b'{"file_name":"test_upload.csv"}\n'
 
+    def test_success_upload_1(self, client):
+        """
+        Test upload. The file will be uploaded in to the current directory named files
+        The test sample will use a empty csv file called test upload
+        :param client:
+        :return: A binary string that includes a list of uploaded file names
+        """
+        assert self.post_file(client, './test_assets/sample_matrix.csv','sample_matrix.csv') \
+               == \
+               b'{"file_name":"sample_matrix.csv"}\n'
+
     def test_format_error(self, client):
         """
         The upload will failed due to the txt file format. An error message will return.
@@ -49,6 +62,10 @@ class TestUpload:
         assert self.post_file(client, './test_assets/test_upload.csv', 'test_upload.txt') \
                == \
                b'{"error_message":"Wrong file format"}\n'
+
+    def test_read(self, client):
+        response = client.get(path='/cloudmesh-ai-services/file/read/sample_matrix')
+        assert b'{"sample_matrix":[[1,2],[3,4],[5,6],[7,8]]}\n' == response.data
 
 class TestLinearRegression:
 
@@ -113,13 +130,22 @@ class TestLinearRegression:
                == \
                response.data
 
-    # def test_learning(self):
-    #     def f(p, q):
-    #         return p+q
-    #
-    #     d = {'p':1, 'q':1}
-    #
-    #     print(f(**d))
+    def test_linear_regression(self, client):
+        """
+        Testing error arguments. The exception raised by the sci-kit learn will be returned in the error message.
+        :param client:
+        :return:
+        """
+        response = client.post(path='/cloudmesh-ai-services/analytics/linear-regression/test_upload',
+                               data=json.dumps({
+                                   'file_name': 'sample-matrix',
+                                   'paras':
+                                       {
+                                           'fit_intercept': True
+                                       }
+                               }),
+                               content_type='application/json')
+        print(response.data)
 
 def test_run_pca(client):
     response = client.get('/cloudmesh-ai-services/analytics/pca')
