@@ -44,6 +44,7 @@ on Flask
 
 * [Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 * [Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+* Gregor von Laszewski, as modifications were substential, he also already set up cloudmesh-analytics, where this code will be migrated to.
 
 ## Progress 
 
@@ -68,6 +69,10 @@ on Flask
 
 1. Update folder structure
 2. Gregor update folder structure, refactor file routes, refacter to analytics route
+
+### Week 8 
+
+1. Migration to cloudmesh-analytics
 
 ### Code Explanation
 
