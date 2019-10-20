@@ -12,23 +12,23 @@ def read(file_name):
         return jsonify({'error_message': 'failed to read'})
     return jsonify({file_name: data.tolist()})
 
-def private_read_file(file_name):
+def read_csv(file_name):
     data = pd.read_csv(os.path.join(current_app.config['UPLOAD_FOLDER'], file_name + '.csv', ), header=None)
     return data.values
 
-def allowed_file(file_name, allowed_extentions):
+def allowed(file_name, allowed_extentions):
     return '.' in file_name and \
            file_name.rsplit('.', 1)[1].lower() in allowed_extentions
 
-def save_file(file):
+def save(file):
     filename = secure_filename(file.filename)
     file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
     # TODO: if save failed?
 
 def upload(file=None):
     ALLOWED_EXTENSIONS = {'csv'}
-    if file and allowed_file(file.filename, ALLOWED_EXTENSIONS):
-        save_file(file)
+    if file and allowed(file.filename, ALLOWED_EXTENSIONS):
+        save(file)
         return jsonify({'file_name': file.filename}), 200
     else:
         return jsonify({'error_message': 'Wrong file format'}), 400

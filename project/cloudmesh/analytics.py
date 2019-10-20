@@ -1,4 +1,3 @@
-import sys
 import os
 from flask import jsonify, current_app
 import numpy as np
@@ -17,3 +16,4 @@ def linear_regression(file_name, body):
 
 def pca():
     return jsonify({"output": 'run_pca_success'})
+
