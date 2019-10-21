@@ -1,9 +1,10 @@
 # Cloudmesh Cloud AI Service
 
+:o2: No names, no hid, Good progress, but please make it easier for use to know who is in your project. Its clear form piazza that I do not know and its not in this report.
+
 The cloudmesh Cloud Ai service will provide AI capabilities that are running on the different cloud, e.g. chamelon, asure. For the example functions, linear regression, principle components analysis and so on will be provided so that users can utilize the computing power of the clouds to train their models. The cloudmesh cloud AI service will administrate  multiple clouds and determine which cloud to use for scheduled tasks. 
 
-Link:
-<https://github.com/cloudmesh-community/fa19-516-151>
+Link: <https://github.com/cloudmesh-community/fa19-516-151>
 
 ## Architecture Design
 
@@ -19,6 +20,7 @@ The architecture primarily contains four objects:
 ## Technical Analysis
 
 ### Operating System
+
 * Mac OS
 
 ### Databae
