@@ -2,10 +2,6 @@ import os
 import connexion
 import sys
 
-# Add the project directory to the system path
-# sys.path.append(os.path.dirname(os.path.dirname(os.getcwd())))
-
-
 def create_app(test_config=None):
     # create and configure the app
     c_app = connexion.App(__name__, specification_dir="./")

@@ -1,9 +1,11 @@
+print(__name__)
+
 import os
 import tempfile
 import pytest
 import sys
 
-from server import create_app
+from ..server import create_app
 from db import get_db, init_db
 
 
