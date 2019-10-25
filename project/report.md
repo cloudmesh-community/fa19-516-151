@@ -96,9 +96,13 @@ on Flask
 
 1. Migration to cloudmesh-analytics <https://github.com/cloudmesh/cloudmesh-analytics>
 
-### Code Explanation
+### Week 9
 
+[Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 
+1. Add cms command to start and stop the server
+
+### Comments on Files
 
 ## Work Breakdown
 
