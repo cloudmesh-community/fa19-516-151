@@ -8,6 +8,7 @@ The cloudmesh Cloud Ai service will provide AI capabilities that are running on 
 
 
 ## Group Members
+* Insights: <https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors>
 
 * Qiwei Liu
     * hid: 151
