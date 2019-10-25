@@ -108,6 +108,10 @@ on Flask
 
 1. Add cms command to start and stop the server
 
+[Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+1. Install Docker in ubuntu VM.
+2. edit Dockerfile and run a simple example in Docker.
+
 ### Comments on Files
 
 ## Work Breakdown
