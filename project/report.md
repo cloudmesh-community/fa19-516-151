@@ -1,12 +1,13 @@
 # Cloudmesh Cloud AI Service
-:o2: No names, no hid, Good progress, but please make it easier for use to know who is in your project. Its clear form piazza that I do not know and its not in this report.
-
-:o2: due to missing names this can not be graded
-
 
 The cloudmesh Cloud Ai service will provide AI capabilities that are running on the different cloud, e.g. chamelon, asure. For the example functions, linear regression, principle components analysis and so on will be provided so that users can utilize the computing power of the clouds to train their models. The cloudmesh cloud AI service will administrate  multiple clouds and determine which cloud to use for scheduled tasks. 
 
-**Group Members**:
+**Link to the project**:
+ 
+ <https://github.com/cloudmesh/cloudmesh-analytics>
+
+
+## Group Members
 
 * Qiwei Liu
     * hid: 151
@@ -17,10 +18,6 @@ The cloudmesh Cloud Ai service will provide AI capabilities that are running on 
     * hid: 170
     * Link to the hid repo 
         * <https://github.com/cloudmesh-community/fa19-516-170>
-
-**Link to the project**:
- 
- <https://github.com/cloudmesh/cloudmesh-analytics>
 
 ## Architecture Design
 
