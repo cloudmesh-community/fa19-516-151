@@ -96,6 +96,15 @@ on Flask
 
 1. Migration to cloudmesh-analytics <https://github.com/cloudmesh/cloudmesh-analytics>
 
+[Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+
+1. Download a virtual box to run Ubuntu 19.04 system.
+2. Reinstall cloudmesh-cloud, mongoDB in Ubuntu 19.04.
+3. Start a VM in Chameleon.
+4. Create venv and install requirements in migrated project folder.
+
+- [ ] Problem1: cannot ssh into VM
+
 ### Week 9
 
 [Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
