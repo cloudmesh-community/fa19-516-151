@@ -1,68 +1,43 @@
 # Cloudmesh Cloud AI Service
 
-The cloudmesh Cloud Ai service will provide AI capabilities that are running on the different cloud, e.g. chamelon, asure. For the example functions, linear regression, principle components analysis and so on will be provided so that users can utilize the computing power of the clouds to train their models. The cloudmesh cloud AI service will administrate  multiple clouds and determine which cloud to use for scheduled tasks. 
+The cloudmesh Cloud Ai service will provide AI capabilities that are running on the different cloud, e.g. chamelon, azure. For the example functions, linear regression, principle components analysis and so on will be provided so that users can utilize the computing power of the clouds to train their models. The cloudmesh cloud AI service will administrate  multiple clouds and determine which cloud to use for scheduled tasks. 
 
-**Link to the project**:
- 
- * <https://github.com/cloudmesh/cloudmesh-analytics>
- 
-**Insights**:
+Team Members: 
+[Qiwei Liu, hid 151](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors), 
+[Yanting Wan, hid 170](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 
-* <https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors>
-* <https://github.com/cloudmesh/cloudmesh-analytics/graphs/contributors>
+Link to the project: <https://github.com/cloudmesh/cloudmesh-analytics>
 
-## Group Members
-
-
-* Qiwei Liu
-    * hid: 151
-    * Link to the hid repo 
-        * <https://github.com/cloudmesh-community/fa19-516-151>
-
-* Yanting Wan
-    * hid: 170
-    * Link to the hid repo 
-        * <https://github.com/cloudmesh-community/fa19-516-170>
+Link to the manual: <https://github.com/cloudmesh/cloudmesh-analytics/blob/master/manual.md>
 
 ## Architecture Design
 
-![architecture](./report-firgures/architecture.svg)
+![architecture](./architecture.png)
 
 The architecture primarily contains four objects:
 
 * User which is the actor
 * The application running on local host using cloudmesh  will manipulate multiple cloud instance, decides delegate computational tasks to which cloud
-* The AI services will be running on the Asure, Chameleon, and Chameleon cloud, exposing APIs to incoming requests, and return the return the result to the local host
+* The AI services will be running on the Azure or chameleon cloud, exposing APIs to incoming requests, and return the return the result to the local host
 
+## Implementation
 
-## Technical Analysis
+### Technologies Used
 
-### Operating System
+| Section              | Content                                                      |
+| -------------------- | ------------------------------------------------------------ |
+| **Operating System** | Mac OS, Ubuntu                                               |
+| **OpenAPI**          | The REST API will be defined by using OpenAPI specification  |
+| **Swagger editor**   | The swagger editor is used to write API documentation based on the OpenAPI standard |
+| **Flask**            | The web application framework that handles incoming requests |
+| **Connexion**        | Connexion is an application on the top of Flask that will map the REST API documentation to python functions on Flask |
+| **Pytest**           | will be the testing framework                                |
 
-* Mac OS
+## Progress Report
 
-### Databae
+### Work Breakdown
 
-* Mongodb
-
-### REST
-
-* OpenAPI: The REST API will be defined by using OpenAPI specification 
-* Swagger editor: The swagger editor is used to write API documentation based on the OpenAPI standard 
-* Flask: The web application framework that handles incoming requests
-* Connexion: Connexion is an application on the top of Flask that will map the REST API documentation to python functions
-on Flask
-* Pytest will be the testing framework
-
-## Benchmark 
-
-## Reference 
-
-# Development 
-
-## Progress 
-
-### Week 6
+#### Week 6
 
 [Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 
@@ -77,24 +52,14 @@ on Flask
 2. Done uploading file locally, testing it on Swagger-ui
 3. Done testing a ai function with locally stored dictionary as parameter, testing it on Swagger-ui
 
-### Week 7
+#### Week 7
 
 [Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
 
 1. Update folder structure
 2. Gregor update folder structure, refactor file routes, refacter to analytics route
-3. Change folder structure
-3. Change folder structure by putting functions under cloudmesh directory
-4. update project report
-5. Update report.md
-7. Update linear regression tests and the exception handling
-8. Change cloudmesh package structure
-9. Merge remote-tracking branch 'refs/remotes/origin/master'
-10. Add more tests to file operations
-11. Done prototyping linear regression
-12. Merge remote-tracking branch 'refs/remotes/origin/master'
 
-### Week 8 
+####  Week 8 
 
 1. Migration to cloudmesh-analytics <https://github.com/cloudmesh/cloudmesh-analytics>
 
@@ -107,48 +72,52 @@ on Flask
 
 - [ ] Problem1: cannot ssh into VM
 
-### Week 9
+#### Week 9
+[Yanting Wan](https://github.com/cloudmesh/cloudmesh-analytics/graphs/contributors)
 
-[Qiwei Liu](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+1. Write pytest scripts that test the result of kmeans
 
-1. Add cms command to start and stop the server
+When writing pytest scripts, come across "Module Not Found Error", to debug, start a new repository 
+[yanting-516-partial-project](https://github.com/YantingWan/yanting-516-partial-project/graphs/contributors).
 
-[Yanting Wan](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
-1. Install Docker in ubuntu VM.
-2. edit Dockerfile and run a simple example in Docker.
+The reasons that cause "Module Not Found Error":
+The "cloudmesh" directory in project has namespace conflict with "cloudmesh" directory in cloudmesh-cloud. Solution:
+Run command "pip install ." or "python setup.py install". Then use command "python -m pytest" to run pytest.
 
-### Comments on Files
+####  Week 10
+[Yanting Wan](https://github.com/cloudmesh/cloudmesh-analytics/graphs/contributors)
 
-## Work Breakdown
+1. Install Docker, run a simple REST service in container
+([yanting-516-partial-project](https://github.com/YantingWan/yanting-516-partial-project/graphs/contributors))
+2. Use cms command to start server in background(from cloudmesh.common.run.background import run)
+3. Use cms command to make post/get request (python requests module)
+4. Use sphinx-apidoc to generate documentation.
 
-## Example Usages
-
-1. Upload a file to the server that will be further processed
-
+Use docker without typing sudo
 ```sh
-curl -X POST "http://localhost:8000/cloudmesh-ai-services/upload" -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "file=@learn.rkt"
+# add docker group
+$ sudo group add docker
+# add user to docker group
+$ sudo gpasswd -a myusername docker
+# restart docker
+$ sudo service docker restart
+$ exit
 ```
 
+#### Week 11
+[Yanting Wan](https://github.com/cloudmesh/cloudmesh-analytics/graphs/contributors)
 
+1. Generate yaml file automatically:
+    1. Use post/get decorator to read docstring inside endpoint functions, based on the docstring, output
+    corresponding yaml file.
+    2. Use jinja module, write a template file, based on the template file, generating corresponding endpoint 
+    functions and yaml file.
+2. Add code to 
+[yanting-516-partial-project](https://github.com/YantingWan/yanting-516-partial-project/graphs/contributors) 
+to use functions in cloudmesh-cloud, then containerlize the project that requires cloudmesh-cloud.
 
-2. Checking the uploaded files
+## Results
 
-```sh
-curl -X GET "http://localhost:8000/cloudmesh-ai-services/list-files" -H "accept: application/json"
-```
+### Benchmark 
 
-
-
-3. Contracting a json file which contains the file name, and the parameters for the linear regression to the REST API. The output will be save on the server that could be downloaded.
-
-```sh
-curl -X POST "http://localhost:8000/cloudmesh-ai-services/linear-regression/linear" -H "accept: */*" -H "Content-Type: application/json" -d "{\"file_name\":\"string\",\"fit_intercept\":true,\"n_jobs\":0,\"normalize\":true}"
-```
-
-
-
-The next version will encapsulate the server request command and user can only provide the content body, For example，
-
-```sh
-cloudmesh ai upload "linear_regression.csv"
-```
+## Reference 
