@@ -1,14 +1,24 @@
 # Cloudmesh Cloud AI Service
 
-The cloudmesh Cloud Ai service will provide AI capabilities that are running on the different cloud, e.g. chamelon, azure. For the example functions, linear regression, principle components analysis and so on will be provided so that users can utilize the computing power of the clouds to train their models. The cloudmesh cloud AI service will administrate  multiple clouds and determine which cloud to use for scheduled tasks. 
-
-Team Members: 
-[Qiwei Liu, hid 151](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors), 
-[Yanting Wan, hid 170](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+* [Qiwei Liu, hid 151](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors), 
+* [Yanting Wan, hid 170](https://github.com/cloudmesh-community/fa19-516-151/graphs/contributors)
+* Gregor von Laszewski
 
 Link to the project: <https://github.com/cloudmesh/cloudmesh-analytics>
 
 Link to the manual: <https://github.com/cloudmesh/cloudmesh-analytics/blob/master/manual.md>
+
+The cloudmesh Cloud Ai service will provide AI capabilities that are
+running on the different cloud, e.g. chamelon, azure. For the example
+functions, linear regression, principle components analysis and so on
+will be provided so that users can utilize the computing power of the
+clouds to train their models. The cloudmesh cloud AI service will
+administrate  multiple clouds and determine which cloud to use for
+scheduled tasks.
+
+:o2: maybe I am wrong, butI think we need to make user interface to this via 
+cms sys generate command easier ...
+
 
 ## Architecture Design
 
@@ -17,21 +27,27 @@ Link to the manual: <https://github.com/cloudmesh/cloudmesh-analytics/blob/maste
 The architecture primarily contains four objects:
 
 * User which is the actor
-* The application running on local host using cloudmesh  will manipulate multiple cloud instance, decides delegate computational tasks to which cloud
-* The AI services will be running on the Azure or chameleon cloud, exposing APIs to incoming requests, and return the return the result to the local host
+
+* The application running on local host using cloudmesh  will manipulate
+  multiple cloud instance, decides delegate computational tasks to which
+  cloud
+
+* The AI services will be running on the Azure or chameleon cloud,
+  exposing APIs to incoming requests, and return the return the result
+  to the local host
 
 ## Implementation
 
 ### Technologies Used
 
-| Section              | Content                                                      |
-| -------------------- | ------------------------------------------------------------ |
-| **Operating System** | Mac OS, Ubuntu                                               |
-| **OpenAPI**          | The REST API will be defined by using OpenAPI specification  |
-| **Swagger editor**   | The swagger editor is used to write API documentation based on the OpenAPI standard |
-| **Flask**            | The web application framework that handles incoming requests |
-| **Connexion**        | Connexion is an application on the top of Flask that will map the REST API documentation to python functions on Flask |
-| **Pytest**           | will be the testing framework                                |
+| Section          | Content                                                      |
+| ---------------- | ------------------------------------------------------------ |
+| Operating System | Mac OS, Ubuntu                                               |
+| OpenAPI          | The REST API will be defined by using OpenAPI specification  |
+| Swagger editor   | The swagger editor is used to write API documentation based on the OpenAPI standard |
+| Flask            | The web application framework that handles incoming requests |
+| Connexion        | Connexion is an application on the top of Flask that will map the REST API documentation to python functions on Flask |
+| Pytest           | will be the testing framework                                |
 
 ## Progress Report
 
@@ -70,7 +86,7 @@ The architecture primarily contains four objects:
 3. Start a VM in Chameleon.
 4. Create venv and install requirements in migrated project folder.
 
-- [ ] Problem1: cannot ssh into VM
+* [ ] Problem1: cannot ssh into VM
 
 #### Week 9
 [Yanting Wan](https://github.com/cloudmesh/cloudmesh-analytics/graphs/contributors)
@@ -88,12 +104,13 @@ Run command "pip install ." or "python setup.py install". Then use command "pyth
 [Yanting Wan](https://github.com/cloudmesh/cloudmesh-analytics/graphs/contributors)
 
 1. Install Docker, run a simple REST service in container
-([yanting-516-partial-project](https://github.com/YantingWan/yanting-516-partial-project/graphs/contributors))
+   ([yanting-516-partial-project](https://github.com/YantingWan/yanting-516-partial-project/graphs/contributors))
 2. Use cms command to start server in background(from cloudmesh.common.run.background import run)
 3. Use cms command to make post/get request (python requests module)
 4. Use sphinx-apidoc to generate documentation.
 
 Use docker without typing sudo
+
 ```sh
 # add docker group
 $ sudo group add docker
@@ -108,10 +125,12 @@ $ exit
 [Yanting Wan](https://github.com/cloudmesh/cloudmesh-analytics/graphs/contributors)
 
 1. Generate yaml file automatically:
-    1. Use post/get decorator to read docstring inside endpoint functions, based on the docstring, output
-    corresponding yaml file.
-    2. Use jinja module, write a template file, based on the template file, generating corresponding endpoint 
-    functions and yaml file.
+
+   1. Use post/get decorator to read docstring inside endpoint functions, based on the docstring, output
+      corresponding yaml file.
+   2. Use jinja module, write a template file, based on the template file, generating corresponding endpoint 
+      functions and yaml file.
+    
 2. Add code to 
 [yanting-516-partial-project](https://github.com/YantingWan/yanting-516-partial-project/graphs/contributors) 
 to use functions in cloudmesh-cloud, then containerlize the project that requires cloudmesh-cloud.
